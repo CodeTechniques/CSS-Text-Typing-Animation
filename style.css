@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #000;
+}
+.text{
+    font-size: 7em;
+    /* color: #fff; */
+    position: relative;
+    white-space: nowrap;
+
+}
+.text::before{
+    content: 'TEXT ANIMATION';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    color: #00fff2;
+    overflow: hidden;
+    border-right: 3px  solid #00fff2;
+    filter: drop-shadow(0 0 20px #00fff2)
+    drop-shadow(0 0 40px #00fff2);
+    /* animation: text 4s steps(14) infinite; */
+}
+@keyframes text {
+    0%,90%,100%{
+        width: 0;
+    }
+    70%,80%{
+        width: 100%;
+    }
+    
+}
